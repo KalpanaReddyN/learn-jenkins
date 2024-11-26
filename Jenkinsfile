@@ -13,6 +13,7 @@ pipeline {
 
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
 
         booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
@@ -78,7 +79,7 @@ pipeline {
             echo "This section run when pipeline success"
         }
         failure{
-            echo "This section run when pipeline failure"
+            echo "This section run when pipeline failure "
         }
     }
 }  
