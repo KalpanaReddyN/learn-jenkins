@@ -36,9 +36,9 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when {
-                expression { env.GIT_BRANCH != "origin/main" }
-            }
+            // when {
+            //     expression { env.GIT_BRANCH != "origin/main" }
+            // }
             steps {
 
                     sh 'echo This is deploy'
@@ -68,7 +68,7 @@ pipeline {
         //         echo "Hello, ${PERSON}, nice to meet you."
         //     }
         // }
-    }
+    } 
 
     post {
         always{
@@ -79,7 +79,7 @@ pipeline {
             echo "This section run when pipeline success"
         }
         failure{
-            echo "This section run when pipeline failure "
+            echo "This section run when pipeline failure"
         }
     }
 }  
